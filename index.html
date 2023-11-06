@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cotizador de Seguros</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Cotizador de Seguros</h1>
+    <div>
+        <label for="tipo-seguro">Tipo de Seguro:</label>
+        <select id="tipo-seguro">
+            <option value="auto">Seguro de Auto</option>
+            <option value="hogar">Seguro de Hogar</option>
+        </select>
+    </div>
+    <div>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad">
+    </div>
+    <div>
+        <label for="cobertura">Cobertura:</label>
+        <input type="number" id="cobertura">
+    </div>
+    <button id="calcular">Calcular Cotización</button>
+    <div id="resultado">
+        <h2>Resultado:</h2>
+        <p id="cotizacion"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
