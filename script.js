@@ -11,13 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const coverage = parseInt(cobertura.value);
         let cotizacion = 0;
 
-        // Lógica de cálculo de cotización (simulada)
-        if (tipo === "auto") {
-            cotizacion = 100 + age * 10 + coverage * 0.5;
-        } else if (tipo === "hogar") {
-            cotizacion = 50 + age * 5 + coverage * 0.3;
+        // Iterar sobre todos los meses
+        for (let mes = 1; mes <= 12; mes++) {
+            // Lógica de cálculo de cotización (simulada)
+            if (tipo === "auto") {
+                cotizacion += 100 + age * 10 + coverage * 0.5;
+            } else if (tipo === "hogar") {
+                cotizacion += 50 + age * 5 + coverage * 0.3;
+            }
         }
 
-        cotizacionElement.textContent = `Cotización: $${cotizacion}`
-    });
+        cotizacionElement.textContent = `Cotización total para los 12 meses: $${cotizacion}`;
+    });
 });
